@@ -158,31 +158,71 @@ export default function SpaceShooter() {
     };
 
     return (
-        <div style={{ width: WIDTH, height: HEIGHT, backgroundColor: "black", position: "relative", overflow: "hidden", margin: "auto" }}>
+        <div style={{
+            width: WIDTH,
+            height: HEIGHT,
+            backgroundColor: "black",
+            position: "relative",
+            overflow: "hidden",
+            margin: "auto"
+        }}>
             {gameOver ? (
-                <div style={{ position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.8)", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", color: "white", fontSize: "24px" }}>
+                <div style={{
+                    position: "absolute",
+                    width: "100%", height: "100%",
+                    backgroundColor: "rgba(0,0,0,0.8)",
+                    display: "flex", flexDirection: "column",
+                    justifyContent: "center", alignItems: "center",
+                    color: "white", fontSize: "24px"
+                }}>
                     <p>Game Over</p>
                     <p>Final Score: {score}</p>
                     <button onClick={restartGame} style={{ fontSize: "20px" }}>Restart</button>
                 </div>
             ) : (
                 <>
-                    <div style={{ position: "absolute", color: "white", fontSize: "20px", top: 10, left: 10 }}>
+                    <div style={{
+                        position: "absolute",
+                        color: "white",
+                        fontSize: "20px",
+                        top: 10, left: 10
+                    }}>
                         Score: {score} | Lives: {lives} | Speed: {playerSpeed}
                     </div>
 
-                    <div style={{ position: "absolute", width: 50, height: 50, backgroundColor: "blue", bottom: 30, left: playerX }} />
+                    <div style={{
+                        position: "absolute",
+                        width: 50, height: 50,
+                        backgroundColor: "blue",
+                        bottom: 30, left: playerX
+                    }} />
 
                     {bullets.map((bullet, index) => (
-                        <div key={index} style={{ position: "absolute", width: 5, height: 20, backgroundColor: "yellow", left: bullet.x, top: bullet.y }} />
+                        <div key={index} style={{
+                            position: "absolute",
+                            width: 5, height: 20,
+                            backgroundColor: "yellow",
+                            left: bullet.x, top: bullet.y
+                        }} />
                     ))}
 
                     {enemies.map((enemy, index) => (
-                        <div key={index} style={{ position: "absolute", width: 50, height: 50, backgroundColor: "red", top: enemy.y, left: enemy.x }} />
+                        <div key={index} style={{
+                            position: "absolute",
+                            width: 50, height: 50,
+                            backgroundColor: "red",
+                            top: enemy.y, left: enemy.x
+                        }} />
                     ))}
 
                     {lifeEnemies.map((enemy, index) => (
-                        <div key={index} style={{ position: "absolute", width: 50, height: 50, backgroundColor: "yellow", borderRadius: "50%", top: enemy.y, left: enemy.x }} />
+                        <div key={index} style={{
+                            position: "absolute",
+                            width: 50, height: 50,
+                            backgroundColor: "yellow",
+                            borderRadius: "50%",
+                            top: enemy.y, left: enemy.x
+                        }} />
                     ))}
                 </>
             )}

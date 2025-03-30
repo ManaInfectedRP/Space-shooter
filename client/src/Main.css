@@ -1,0 +1,12 @@
+/* Main.css */
+.button-style {
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right: 10px;
+}

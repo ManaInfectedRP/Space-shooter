@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import './Main.css'
 
 const WIDTH = 600;
 const HEIGHT = 800;
@@ -177,7 +178,8 @@ export default function SpaceShooter() {
                 }}>
                     <p>Game Over</p>
                     <p>Final Score: {score}</p>
-                    <button onClick={restartGame} style={{ fontSize: "20px" }}>Restart</button>
+                    <button onClick={restartGame} className="button-style">Restart</button>
+                    <button onClick={() => window.location.reload()} className="button-style">Main Menu</button>
                 </div>
             ) : (
                 <>

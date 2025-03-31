@@ -9,6 +9,7 @@ import ObstacleAvoidance from "./ObstacleAvoidance.jsx";
 import Snake from "./Snake.jsx";
 import CandyCrush from "./CandyCrush.jsx";
 import PingPong from "./PingPong.jsx";
+import Minesweeper from "./Minesweeper.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -31,6 +32,7 @@ export default function MainMenu() {
         { name: "Obstacle Avoidance", component: <ObstacleAvoidance /> },
         { name: "Candy Crush", component: <CandyCrush /> },
         { name: "Ping Pong", component: <PingPong /> },
+        { name: "Minesweeper", component: <Minesweeper /> },
         // Lägg till fler spel här om du vill
     ];
 

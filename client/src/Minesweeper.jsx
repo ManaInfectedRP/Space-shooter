@@ -54,6 +54,7 @@ const Minesweeper = () => {
     }, [board, gameOver]);
 
     const revealCell = (x, y) => {
+        if (board[x][y].revealed || board[x][y].flagged || gameOver) return;
         if (board[x][y].revealed || board[x][y].flagged || gameOver || gameWon) return;
         if (board[x][y].mine) {
             setGameOver(true);
@@ -114,6 +115,7 @@ const Minesweeper = () => {
                         <button
                             key={`${x}-${y}`}
                             onClick={() => revealCell(x, y)}
+                            disabled={gameOver}
                             style={{
                                 width: 40,
                                 height: 40,
@@ -131,7 +133,9 @@ const Minesweeper = () => {
                     ))
                 )}
             </div>
-            <button onClick={() => setDebugMode(!debugMode)}
+            <button
+                id="toggle-debug"
+                onClick={() => setDebugMode(!debugMode)}
                     style={{padding: "10px", marginLeft: "10px", cursor: "pointer"}}>Toggle Debug
             </button>
 

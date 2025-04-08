@@ -10,6 +10,11 @@ import Snake from "./Snake.jsx";
 import CandyCrush from "./CandyCrush.jsx";
 import PingPong from "./PingPong.jsx";
 import Minesweeper from "./Minesweeper.jsx";
+import BlackJack from "./BlackJack.jsx";
+import PokerGame from "./PokerGame.jsx";
+import AllCards from "./AllCards.jsx";
+import MemoryGame from "./MemoryGame.jsx";
+import FlappyBirdGame from "./FlappyBirdGame.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -33,6 +38,12 @@ export default function MainMenu() {
         { name: "Candy Crush", component: <CandyCrush /> },
         { name: "Ping Pong", component: <PingPong /> },
         { name: "Minesweeper", component: <Minesweeper /> },
+        { name: "All Cards", component: <AllCards /> },
+        { name: "Poker", component: <PokerGame /> },
+        { name: "Black Jack", component: <BlackJack /> },
+        { name: "Memory Game", component: <MemoryGame />},
+        { name: "Flappy Bird", component: <FlappyBirdGame /> },
+            
         // Lägg till fler spel här om du vill
     ];
 
@@ -76,6 +87,7 @@ export default function MainMenu() {
                             >
                                 <h2 style={{ fontSize: "20px", marginBottom: "10px" }}>{game.name}</h2>
                                 <button
+                                    id ={game.name.toLowerCase().replace(" ", "-")}
                                     onClick={() => setCurrentGame(game.component)}
                                     style={{
                                         fontSize: "18px",

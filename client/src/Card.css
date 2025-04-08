@@ -1,0 +1,89 @@
+﻿.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 100px;
+    height: 140px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    background: white;
+    position: relative;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header,
+.card-footer {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.card-header {
+    top: 5px;
+    left: 5px;
+}
+
+.card-footer {
+    bottom: 5px;
+    right: 5px;
+}
+
+.card-body {
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Suit coloring for header, footer and body */
+.suit-hearts,
+.suit-diamonds {
+    color: red;
+}
+
+.suit-spades,
+.suit-clubs {
+    color: black;
+}
+
+.game-over {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/* Färg för header och footer beroende på suit */
+.header-footer-hearts, .header-footer-diamonds {
+    color: red;
+}
+
+.header-footer-spades, .header-footer-clubs {
+    color: black;
+}
+
+.selected {
+    border: 3px solid blue;
+    border-radius: 8px;
+}
+
+.card-containers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolumner */
+    gap: 10px; /* Avstånd mellan korten */
+    justify-items: center; /* Centrerar korten i varje cell */
+    margin-top: 20px;
+    width: 640px; /* Sätt bredden på container till 640px */
+    margin-left: auto; /* Centrerar container horisontellt */
+    margin-right: auto; /* Centrerar container horisontellt */
+}

@@ -15,6 +15,7 @@ import PokerGame from "./PokerGame.jsx";
 import AllCards from "./AllCards.jsx";
 import MemoryGame from "./MemoryGame.jsx";
 import FlappyBirdGame from "./FlappyBirdGame.jsx";
+import ClickerGame from "./ClickerGame.jsx";
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -43,6 +44,7 @@ export default function MainMenu() {
         { name: "Black Jack", component: <BlackJack /> },
         { name: "Memory Game", component: <MemoryGame />},
         { name: "Flappy Bird", component: <FlappyBirdGame /> },
+        { name: "Clicker Game", component: <ClickerGame /> },
             
         // Lägg till fler spel här om du vill
     ];
